@@ -1,0 +1,18 @@
+ImmutableTriangle: {
+  shape: class
+
+  # fields
+  -a: ImmutablePoint
+  -b: ImmutablePoint
+  -c: ImmutablePoint
+
+  # constructor
+  MutableTriangle(a ImmutablePoint, b ImmutablePoint, c ImmutablePoint): ImmutableTriangle
+
+  # methods
+  getA(): ImmutablePoint
+  getB(): ImmutablePoint
+  getC(): ImmutablePoint
+  translate(): ImmutableTriangle
+  perimeter(): double
+}
