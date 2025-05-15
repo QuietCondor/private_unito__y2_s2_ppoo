@@ -6,63 +6,43 @@
  */
 public class Nil extends List {
   /**
-   * Costruttore di default new Nil()
-   * Riscriviamo i metodi astratti di List e il metodo toString nel
-   * caso della lista vuota.
-   */
-
-  /**
-   * empty() e' costante = true sulla sottoclasse Nil, e' costante = false sulla
-   * sottoclasse Cons, dunque NON e' costante su List
+   * {@inheritDoc}
    */
   public boolean empty() {
     return true;
   }
 
   /**
-   * size() e' costante = 0 sulla sottoclasse Cons, NON e'
-   * costante sulla sottoclasse Cons, dunque NON e' costante su List
+   * {@inheritDoc}
    */
   public int size() {
     return 0;
   }
 
   /**
-   * contains(x) e' costante = false sulla sottoclasse Nil, NON e' costante sulla
-   * sottoclasse Cons, dunque NON e' costante su List
+   * {@inheritDoc}
    */
   public boolean contains(int x) {
     return false;
   }
 
   /**
-   * insert. Metodo che aggiunge x a una lista
-   * Quando aggiungo un elemento costruisco una nuova lista non vuota,
-   * dunque nella sottoclasse concreta Cons. Devo quindi usare new e il
-   * costruttore Cons per descrivere il risultato, e non posso compilare
-   * Nil prima di compilare Cons.
+   * {@inheritDoc}
    */
   public List insert(int x) {
     return new Cons(x, this);
   }
-  /*
-   * NOTA: qui this indica un elemento della classe Nil, la lista vuota. Evitando
-   * di scrivere new Nil() riutilizzo la precedente lista vuota, ovvero quella su
-   * cui ho chiamato il metodo.
-   */
 
   /**
-   * toString. Sovrascrivo il metodo toString() (che fa parte di
-   * ogni classe) per definire una stringa (vuota) che rappresenta la
-   * lista vuota.
+   * {@inheritDoc}
    */
+  @Override
   public String toString() {
     return "";
   }
 
-  /*
-   * L'unione di una lista vuota e di l e' l. Restituendo l stessa
-   * evito di definire un clone di l e risparmio memoria.
+  /**
+   * {@inheritDoc}
    */
   public List append(List l) {
     return l;

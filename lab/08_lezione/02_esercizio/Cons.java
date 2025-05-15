@@ -22,21 +22,29 @@ public class Cons extends List {
     this.next = next;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public boolean empty() {
     return false;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public int size() {
     return 1 + next.size();
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public boolean contains(int x) {
     return x == elem || next.contains(x);
   }
 
   /**
-   * Insert. Metodo che aggiunge x, costruisce una nuova lista
-   * riutilizzando this se possibile, e preserva l'ordine crescente
+   * {@inheritDoc}
    */
   public List insert(int x) {
     // Se x piu' piccolo del primo elem aggiungo x davanti a tutti:
@@ -52,10 +60,7 @@ public class Cons extends List {
   }
 
   /**
-   * Append. Aggiunge una lista l a this, costruendo una nuova
-   * lista e preservando l'ordine crescente. Usiamo insert per
-   * aggiungere il contenuto di l un elemento alla volta
-   * preservando l'ordine ad ogni passo.
+   * {@inheritDoc}
    */
   public List append(List l) {
     if (l.empty()) // questo test non e' strettamente necessario, ma rende la computazione piu'
@@ -65,7 +70,10 @@ public class Cons extends List {
       return next.append(l).insert(elem);
   }
 
-  /** toString. Metodo che restituisce una stringa che descrive la lista */
+  /**
+   * {@inheritDoc}
+   */
+  @Override
   public String toString() {
     return elem + " " + next.toString();
   }
