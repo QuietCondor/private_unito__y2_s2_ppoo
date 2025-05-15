@@ -47,4 +47,45 @@ public abstract class List {
     * @return La nuova lista concatenata.
     */
    public abstract List append(List l);
+
+   /**
+    * Restituisce la somma di tutti gli elementi nella lista.
+    * 
+    * @return
+    */
+   public abstract int sum();
+
+   /**
+    * Restituisce (se esiste) l'elemento in posizione index.
+    * 
+    * @param index L'indice a cui cercare l'elemento (0 based).
+    * @return L'elemento se e' stato trovato. NULL Altrimenti.
+    */
+   public abstract Integer get(int index);
+
+   /**
+    * Restituisce una nuova lista contenente tutti gli elementi
+    * della lista corrente incrementati di 1.
+    * 
+    * @return La nuova lista incrementata.
+    */
+   public abstract List succ();
+
+   /**
+    * Restituisce una nuova lista contenente tutti gli elementi
+    * minori-uguali di un dato elemento.
+    * 
+    * @param x Il dato elemento.
+    * @return La sotto-lista.
+    */
+   public abstract List filter_le(int x);
+
+   /**
+    * Restituisce una nuova lista contenente tutti gli elementi
+    * maggiori di un dato elemento.
+    * 
+    * @param x Il dato elemento.
+    * @return La sotto-lista.
+    */
+   public abstract List filter_gt(int x);
 }

@@ -77,4 +77,72 @@ public class Cons extends List {
   public String toString() {
     return elem + " " + next.toString();
   }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int sum() {
+    return this.elem + next.sum();
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public Integer get(int index) {
+    if (index < 0) {
+      return null;
+    } else if (index == 0) {
+      return this.elem;
+    }
+
+    return next.get(index - 1);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public List succ() {
+    if (this.empty()) {
+      return this;
+    }
+
+    return new Cons(elem + 1, next.succ());
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public List filter_le(int x) {
+    if (empty()) {
+      return new Nil();
+    }
+
+    if (elem > x) {
+      return new Nil();
+    }
+
+    return new Cons(elem, next.filter_le(x));
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public List filter_gt(int x) {
+    if (empty()) {
+      return new Nil();
+    }
+
+    List list = next.filter_gt(x);
+
+    if (elem < x) {
+      return list;
+    }
+
+    return new Cons(elem, list);
+  }
 }

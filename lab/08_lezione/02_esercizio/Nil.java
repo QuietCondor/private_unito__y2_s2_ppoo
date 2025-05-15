@@ -47,4 +47,42 @@ public class Nil extends List {
   public List append(List l) {
     return l;
   }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int sum() {
+    return 0;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public Integer get(int index) {
+    return null;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public List succ() {
+    return this;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public List filter_le(int x) {
+    return this;
+  }
+
+  @Override
+  public List filter_gt(int x) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'filter_gt'");
+  }
 }

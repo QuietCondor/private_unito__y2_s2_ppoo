@@ -60,5 +60,30 @@ public class TestList {
     printf("m.append(l) = %s | Expected [1,2,3,4]", m.append(l));
     printf("m.append(l).append(l) = %s | Expected [1,2,3,4]", m.append(l).append(l));
     printDivider();
+
+    printDivider();
+    printf("l.sum() = %s | Expected 3", l.sum());
+    printf("e.sum() = %s | Expected 0", e.sum());
+    printDivider();
+
+    printDivider();
+    printf("l.get(0) = %s | Expected 1", l.get(0));
+    printf("l.get(1) = %s | Expected 2", l.get(1));
+    printf("l.get(40) = %s | Expected null", l.get(40));
+    printf("l.get(-40) = %s | Expected null", l.get(-40));
+    printf("e.get(0) = %s | Expected null", e.get(0));
+    printDivider();
+
+    printDivider();
+    printf("d.succ().toString() = %s | Expected [6, 11, 16, 21, 26]", d.succ().toString());
+    printf("e.succ().toString() = %s | Expected []", e.succ().toString());
+    printDivider();
+
+    printDivider();
+    printf("d.filter_le(19).toString() = %s | Expected [5, 10, 15]", d.filter_le(19).toString());
+    printf("d.filter_le(40).toString() = %s | Expected [5, 10, 15, 20, 25]", d.filter_le(40).toString());
+    printf("d.filter_le(1).toString() = %s | Expected []", d.filter_le(1).toString());
+    printf("e.filter_le(100).toString() = %s | Expected []", e.filter_le(100).toString());
+    printDivider();
   }
 }
