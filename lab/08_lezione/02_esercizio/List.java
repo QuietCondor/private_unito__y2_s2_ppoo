@@ -88,4 +88,12 @@ public abstract class List {
     * @return La sotto-lista.
     */
    public abstract List filter_gt(int x);
+
+   /**
+    * Restituice l'inersezione delle liste date come parametro
+    * 
+    * @param l La seconda lista
+    * @return Una lista formata dall'intersezione fra le due liste.
+    */
+   public abstract List intersect(List l);
 }

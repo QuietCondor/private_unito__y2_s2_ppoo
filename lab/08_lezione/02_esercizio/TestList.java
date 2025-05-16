@@ -85,5 +85,23 @@ public class TestList {
     printf("d.filter_le(1).toString() = %s | Expected []", d.filter_le(1).toString());
     printf("e.filter_le(100).toString() = %s | Expected []", e.filter_le(100).toString());
     printDivider();
+
+    printDivider();
+    printf("d.filter_gt(15).toString() = %s | Expected [20, 25]", d.filter_gt(15).toString());
+    printf("d.filter_gt(14).toString() = %s | Expected [15, 20, 25]",
+        d.filter_gt(14).toString());
+    printf("d.filter_gt(100).toString() = %s | Expected []",
+        d.filter_gt(100).toString());
+    printf("e.filter_gt(100).toString() = %s | Expected []",
+        e.filter_gt(100).toString());
+    printDivider();
+
+    printDivider();
+    printf("a.intersect(b).toString() = %s | Expected [10, 20]", a.intersect(b).toString());
+    printf("b.intersect(a).toString() = %s | Expected [10, 20]", b.intersect(a).toString());
+    printf("a.intersect(l).toString() = %s | Expected []", a.intersect(l).toString());
+    printf("l.intersect(a).toString() = %s | Expected []", l.intersect(a).toString());
+    printf("b.intersect(e).toString() = %s | Expected []", b.intersect(e).toString());
+    printDivider();
   }
 }

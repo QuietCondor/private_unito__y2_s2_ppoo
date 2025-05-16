@@ -139,10 +139,27 @@ public class Cons extends List {
 
     List list = next.filter_gt(x);
 
-    if (elem < x) {
+    if (elem <= x) {
       return list;
     }
 
     return new Cons(elem, list);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public List intersect(List l) {
+    if (empty()) {
+      return new Nil();
+    }
+
+    List intList = next.intersect(l);
+    if (l.contains(elem)) {
+      return intList.insert(elem);
+    }
+
+    return intList;
   }
 }

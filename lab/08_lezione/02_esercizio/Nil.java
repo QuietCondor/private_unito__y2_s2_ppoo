@@ -80,9 +80,19 @@ public class Nil extends List {
     return this;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   @Override
   public List filter_gt(int x) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'filter_gt'");
+    return this;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public List intersect(List l) {
+    return this;
   }
 }
