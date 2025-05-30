@@ -1,0 +1,18 @@
+Esercizio Pre-Test: Sistema di Gestione Prestiti Librari (Totale: 31 punti, Sufficienza: 18)
+
+Scrivere una classe `LibraryLoan` che contenga i seguenti elementi:
+
+- una variabile statica intera `loanCounter` che tenga traccia del numero totale di prestiti effettuati (e che venga usata per generare un identificativo univoco per ogni prestito);
+- tre attributi dinamici `private`: 
+    - `loanId` (int) identificativo del prestito, inizializzato usando la variabile statica `loanCounter`,
+    - `bookTitle` (String) titolo del libro prestato,
+    - `loanDate` (LocalDate) data del prestito;
+- due costruttori: uno che inizializzi `bookTitle` e `loanDate`; uno senza argomenti che inizializzi `loanId` usando `loanCounter` e lasci vuoti gli altri attributi;
+- metodi getter e setter per `bookTitle` e `loanDate`; `loanId` non deve avere un setter;
+- override dei metodi `equals()` e `toString()` specifici per la classe;
+- un metodo domain-specific `renewLoan()` che aggiorni la `loanDate` alla data corrente;
+- un metodo statico domain-specific `getTotalLoans()` che ritorni il numero totale di prestiti creati (valore di `loanCounter`);
+
+Advanced (bonus): Scrivere una sottoclasse `StudentLoan` che estenda `LibraryLoan`:
+- aggiungere un attributo `maxRenewals` (int) che rappresenti il numero massimo di rinnovi disponibili per lo studente;
+- sovrascrivere il metodo `renewLoan()` per ridurre `maxRenewals` e impedire rinnovi se ha raggiunto 0.
