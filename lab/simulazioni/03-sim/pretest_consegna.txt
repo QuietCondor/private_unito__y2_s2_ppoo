@@ -1,0 +1,18 @@
+Esercizio Pre-Test: Sistema di Gestione Prenotazioni Ristorante (Totale: 31 punti, Sufficienza: 18)
+
+Scrivere una classe `Reservation` che contenga i seguenti elementi:
+
+- una variabile statica intera `reservationCounter` che tenga traccia del numero totale di prenotazioni effettuate (e che venga usata per generare un identificativo univoco per ogni prenotazione);
+- tre attributi dinamici `private`: 
+    - `reservationId` (int) identificativo della prenotazione, inizializzato usando la variabile statica `reservationCounter`,
+    - `customerName` (String) nome del cliente,
+    - `numberOfGuests` (int) numero di ospiti;
+- due costruttori: uno che inizializzi `customerName` e `numberOfGuests`; uno senza argomenti che inizializzi `reservationId` usando `reservationCounter` e lasci vuoti gli altri attributi;
+- metodi getter e setter per `customerName` e `numberOfGuests`; `reservationId` non deve avere un setter;
+- override dei metodi `equals()` e `toString()` specifici per la classe;
+- un metodo domain-specific `updateGuests(int newCount)` per aggiornare il numero di ospiti;
+- un metodo statico domain-specific `getTotalReservations()` che ritorni il numero totale di prenotazioni create (valore di `reservationCounter`);
+
+Advanced (bonus): Scrivere una sottoclasse `VIPReservation` che estenda `Reservation`:
+- aggiungere un attributo `specialRequest` (String) per richieste speciali del cliente;
+- sovrascrivere il metodo `toString()` per includere la richiesta speciale nella descrizione.
