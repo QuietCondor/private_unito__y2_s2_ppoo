@@ -1,0 +1,18 @@
+Esercizio Pre-Test: Sistema di Monitoraggio Dispositivi Smart Home (Totale: 31 punti, Sufficienza: 18)
+
+Scrivere una classe `SmartDevice` che contenga i seguenti elementi:
+
+- una variabile statica intera `deviceCounter` che tenga traccia del numero totale di dispositivi creati (e che venga usata per generare un identificativo univoco per ogni dispositivo);
+- tre attributi dinamici `private`: 
+    - `deviceId` (int) identificativo del dispositivo, inizializzato usando la variabile statica `deviceCounter`,
+    - `deviceName` (String) nome del dispositivo,
+    - `isOnline` (boolean) che indica se il dispositivo è attivo;
+- due costruttori: uno che inizializzi `deviceName` e `isOnline`; uno senza argomenti che inizializzi solo `deviceId` usando `deviceCounter`;
+- metodi getter e setter per `deviceName` e `isOnline`; `deviceId` non deve avere un setter;
+- override dei metodi `equals()` e `toString()` specifici per la classe;
+- un metodo domain-specific `toggleStatus()` che cambi lo stato da online a offline o viceversa;
+- un metodo statico domain-specific `getTotalDevices()` che ritorni il numero totale di dispositivi creati (valore di `deviceCounter`);
+
+Advanced (bonus): Scrivere una sottoclasse `SmartLight` che estenda `SmartDevice`:
+- aggiungere un attributo `brightnessLevel` (int, da 0 a 100);
+- sovrascrivere `toggleStatus()` per impostare `brightnessLevel` a 0 quando viene spento.
