@@ -1,0 +1,18 @@
+Esercizio Pre-Test: Sistema di Gestione Ordini Online (Totale: 31 punti, Sufficienza: 18)
+
+Scrivere una classe `Order` che contenga i seguenti elementi:
+
+- una variabile statica intera `orderCounter` che tenga traccia del numero totale di ordini effettuati (e che venga usata per generare un identificativo univoco per ogni ordine);
+- tre attributi dinamici `private`: 
+    - `orderId` (int) identificativo dell'ordine, inizializzato usando la variabile statica `orderCounter`,
+    - `customerEmail` (String) email del cliente,
+    - `orderTotal` (double) totale dell’ordine;
+- due costruttori: uno che inizializzi `customerEmail` e `orderTotal`; uno senza argomenti che inizializzi solo `orderId` usando `orderCounter`;
+- metodi getter e setter per `customerEmail` e `orderTotal`; `orderId` non deve avere un setter;
+- override dei metodi `equals()` e `toString()` specifici per la classe;
+- un metodo domain-specific `applyDiscount(double percentage)` che applichi uno sconto all’importo totale;
+- un metodo statico domain-specific `getTotalOrders()` che ritorni il numero totale di ordini creati (valore di `orderCounter`);
+
+Advanced (bonus): Scrivere una sottoclasse `ExpressOrder` che estenda `Order`:
+- aggiungere un attributo `deliveryHours` (int) che rappresenta il tempo di consegna stimato in ore;
+- sovrascrivere il metodo `toString()` per includere le informazioni di consegna.
