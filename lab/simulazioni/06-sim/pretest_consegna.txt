@@ -1,0 +1,18 @@
+Esercizio Pre-Test: Sistema di Gestione Corsi Universitari (Totale: 31 punti, Sufficienza: 18)
+
+Scrivere una classe `Course` che contenga i seguenti elementi:
+
+- una variabile statica intera `courseCounter` che tenga traccia del numero totale di corsi creati (e che venga usata per generare un identificativo univoco per ogni corso);
+- tre attributi dinamici `private`: 
+    - `courseId` (int) identificativo del corso, inizializzato usando la variabile statica `courseCounter`,
+    - `courseName` (String) nome del corso,
+    - `credits` (int) numero di crediti del corso;
+- due costruttori: uno che inizializzi `courseName` e `credits`; uno senza argomenti che inizializzi solo `courseId` usando `courseCounter`;
+- metodi getter e setter per `courseName` e `credits`; `courseId` non deve avere un setter;
+- override dei metodi `equals()` e `toString()` specifici per la classe;
+- un metodo domain-specific `increaseCredits(int extraCredits)` per aumentare il numero di crediti del corso;
+- un metodo statico domain-specific `getTotalCourses()` che ritorni il numero totale di corsi creati (valore di `courseCounter`);
+
+Advanced (bonus): Scrivere una sottoclasse `OnlineCourse` che estenda `Course`:
+- aggiungere un attributo `platform` (String) che rappresenti la piattaforma online usata;
+- sovrascrivere `toString()` per includere le informazioni sulla piattaforma.
