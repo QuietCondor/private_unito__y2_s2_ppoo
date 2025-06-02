@@ -1,0 +1,18 @@
+Esercizio Pre-Test: Sistema di Gestione Veicoli a Noleggio (Totale: 31 punti, Sufficienza: 18)
+
+Scrivere una classe `Vehicle` che contenga i seguenti elementi:
+
+- una variabile statica intera `vehicleCounter` che tenga traccia del numero totale di veicoli registrati (e che venga usata per generare un identificativo univoco per ogni veicolo);
+- tre attributi dinamici `private`: 
+    - `vehicleId` (int) identificativo del veicolo, inizializzato usando la variabile statica `vehicleCounter`,
+    - `plateNumber` (String) targa del veicolo,
+    - `rented` (boolean) che indica se il veicolo è attualmente noleggiato;
+- due costruttori: uno che inizializzi `plateNumber` e `rented`; uno senza argomenti che inizializzi solo `vehicleId` usando `vehicleCounter`;
+- metodi getter e setter per `plateNumber` e `rented`; `vehicleId` non deve avere un setter;
+- override dei metodi `equals()` e `toString()` specifici per la classe;
+- un metodo domain-specific `toggleRentalStatus()` che cambi lo stato del noleggio;
+- un metodo statico domain-specific `getTotalVehicles()` che ritorni il numero totale di veicoli registrati (valore di `vehicleCounter`);
+
+Advanced (bonus): Scrivere una sottoclasse `ElectricVehicle` che estenda `Vehicle`:
+- aggiungere un attributo `batteryLevel` (double) che rappresenti la percentuale della batteria;
+- sovrascrivere il metodo `toggleRentalStatus()` per resettare `batteryLevel` a 100.0 quando viene restituito (cioè da `rented` a `false`).
